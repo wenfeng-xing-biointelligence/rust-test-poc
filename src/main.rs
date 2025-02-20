@@ -33,4 +33,15 @@ mod tests{
         assert_eq!(closurer_1(), 100);
         assert_eq!(closurer_2(), 200);
     }
+
+    fn test_adder(){
+        let provider_1 = Provider_1;
+        let provider_2 = Provider_2;
+
+        let adder_1 = adder(Box::new(provider_1));
+        let adder_2 = adder(Box::new(provider_2));
+
+        assert_eq!(adder_1(10), 110);
+        assert_eq!(adder_2(10), 210);
+    }
 }
